@@ -1,0 +1,129 @@
+---
+// Inline-SVG career timeline: horizontal on wide screens, vertical on phones.
+// Both drawings are decorative; the visually hidden list carries the content.
+interface Props {
+  milestones: { year: string | null; label: string }[];
+}
+
+const { milestones } = Astro.props;
+const n = milestones.length;
+
+// Horizontal geometry (viewBox units ≈ px at full container width).
+const H = { width: 960, height: 116, x0: 96, x1: 864, lineY: 46 };
+const hx = (i: number) => H.x0 + (n > 1 ? (i * (H.x1 - H.x0)) / (n - 1) : 0);
+
+// Vertical geometry.
+const V = { width: 360, rowHeight: 72, top: 14, x: 10 };
+const vy = (i: number) => V.top + i * V.rowHeight;
+const vHeight = vy(n - 1) + 40;
+
+const yearText = (year: string | null) => year ?? '[TODO: year]';
+---
+
+<figure class="timeline">
+  <ol class="visually-hidden">
+    {milestones.map((m) => <li>{yearText(m.year)}: {m.label}</li>)}
+  </ol>
+
+  <svg
+    class="horizontal"
+    viewBox={`0 0 ${H.width} ${H.height}`}
+    aria-hidden="true"
+    focusable="false"
+  >
+    <line class="track" x1={H.x0} y1={H.lineY} x2={H.x1} y2={H.lineY} />
+    {
+      milestones.map((m, i) => (
+        <g>
+          <circle class="dot" cx={hx(i)} cy={H.lineY} r="6" />
+          <text class:list={['year', { todo: !m.year }]} x={hx(i)} y={H.lineY - 18} text-anchor="middle">
+            {yearText(m.year)}
+          </text>
+          <text class="label" x={hx(i)} y={H.lineY + 36} text-anchor="middle">
+            {m.label}
+          </text>
+        </g>
+      ))
+    }
+  </svg>
+
+  <svg
+    class="vertical"
+    viewBox={`0 0 ${V.width} ${vHeight}`}
+    aria-hidden="true"
+    focusable="false"
+  >
+    <line class="track" x1={V.x} y1={vy(0)} x2={V.x} y2={vy(n - 1)} />
+    {
+      milestones.map((m, i) => (
+        <g>
+          <circle class="dot" cx={V.x} cy={vy(i)} r="6" />
+          <text class:list={['year', { todo: !m.year }]} x={V.x + 22} y={vy(i) + 5}>
+            {yearText(m.year)}
+          </text>
+          <text class="label" x={V.x + 22} y={vy(i) + 29}>
+            {m.label}
+          </text>
+        </g>
+      ))
+    }
+  </svg>
+</figure>
+
+<style>
+  .timeline {
+    margin: var(--space-4) 0 0;
+  }
+
+  svg {
+    display: block;
+    width: 100%;
+    height: auto;
+    overflow: visible;
+  }
+
+  .vertical {
+    display: none;
+    max-width: 360px;
+  }
+
+  @media (max-width: 47.99rem) {
+    .horizontal {
+      display: none;
+    }
+
+    .vertical {
+      display: block;
+    }
+  }
+
+  .track {
+    stroke: var(--accent);
+    stroke-width: 2;
+  }
+
+  .dot {
+    fill: var(--accent);
+  }
+
+  text {
+    font-family: var(--font-sans);
+  }
+
+  .year {
+    fill: var(--muted);
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+  }
+
+  .year.todo {
+    font-weight: 400;
+    letter-spacing: 0;
+  }
+
+  .label {
+    fill: var(--text);
+    font-size: 16px;
+  }
+</style>

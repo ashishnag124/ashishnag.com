@@ -127,6 +127,11 @@ img {
   padding-inline: var(--gutter);
 }
 
+.section {
+  padding-block: var(--space-5);
+  border-top: 1px solid var(--rule);
+}
+
 .visually-hidden:not(:focus):not(:active) {
   position: absolute;
   width: 1px;

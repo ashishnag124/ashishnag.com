@@ -1,0 +1,63 @@
+---
+import Todo from './Todo.astro';
+---
+
+<section id="ventures" class="container section" aria-labelledby="ventures-heading">
+  <h2 id="ventures-heading">Ventures</h2>
+  <div class="cards">
+    <article class="card">
+      <p class="logo"><Todo>Selective Sips logo — add file</Todo></p>
+      <h3>Selective Sips</h3>
+      <p class="role">Founder & Lead Consultant</p>
+      <p>
+        Cellar strategy, sourcing, and collection management for private clients in California,
+        delivered by a team of three WSET Level 3–certified consultants.
+      </p>
+      <p class="link"><a href="https://selectivesips.com">selectivesips.com</a></p>
+    </article>
+
+    <article class="card">
+      <h3>Settld</h3>
+      <p class="role">Founder</p>
+      <p>
+        Settld turns decisions scattered across meetings, Slack, email, and Teams into one
+        searchable record, with an owner and deadline for each, and flags when a new decision
+        contradicts an old one. Live with free, Team, and Business plans.
+      </p>
+      <p><Todo>traction line — teams, users, or a customer quote</Todo></p>
+      <p class="link"><a href="https://www.itssettld.com/">itssettld.com</a></p>
+    </article>
+  </div>
+</section>
+
+<style>
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 22rem), 1fr));
+    gap: var(--space-4);
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    padding-top: var(--space-3);
+    border-top: 2px solid var(--text);
+  }
+
+  .card h3 {
+    margin-bottom: var(--space-1);
+  }
+
+  .role {
+    color: var(--muted);
+    font-size: var(--step--1);
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  .link {
+    margin-top: auto;
+    margin-bottom: 0;
+  }
+</style>
