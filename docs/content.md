@@ -64,5 +64,5 @@ Links: email · LinkedIn · Résumé PDF [TODO: add file to `public/resume.pdf`]
 ## Meta
 
 - Title: Ashish Nag — Product leader and founder
-- Description: [TODO: one sentence, ≤155 characters, Ashish to approve]
+- Description: Product leader specializing in turning messy problems into scaled systems. Builder at heart.
 - Social preview image: 1200×630, name + positioning line on the site's background color
