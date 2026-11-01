@@ -5,7 +5,7 @@
   --bg: #fafaf7;
   --text: #1a1a1a; /* 16.6:1 */
   --muted: #5c5a55; /* 6.6:1 */
-  --accent: #7b1e2b; /* oxblood, 9.7:1. Links and the timeline only. */
+  --accent: #7b1e2b; /* oxblood, 9.7:1. Links only. */
   --rule: #dddad2;
 
   --font-serif: 'Source Serif 4 Variable', Georgia, 'Times New Roman', serif;
@@ -125,6 +125,11 @@ img {
   max-width: var(--page-max);
   margin-inline: auto;
   padding-inline: var(--gutter);
+}
+
+.section {
+  padding-block: var(--space-5);
+  border-top: 1px solid var(--rule);
 }
 
 .visually-hidden:not(:focus):not(:active) {

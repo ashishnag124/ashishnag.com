@@ -17,7 +17,7 @@ Personal site for Ashish Nag: a writing-led portfolio that shows a product leade
 
 ## Site structure
 
-- `/` — one page, five sections in this order: Hero, About (with career timeline), Ventures, Projects, Contact. Sticky header with four anchor links: About, Ventures, Projects, Contact.
+- `/` — one page, five sections in this order: Hero, About, Ventures, Projects, Contact. Sticky header with four anchor links: About, Ventures, Projects, Contact.
 - `/projects/<slug>` — one case study per project, template: Problem → Who it's for → Key decisions and trade-offs → What I built → Results or status → What's next. 300–500 words, 2–3 screenshots.
 - Out of scope for v1: blog, testimonials, skill bars, an on-page résumé, contact form.
 

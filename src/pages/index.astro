@@ -1,46 +1,19 @@
 ---
 import Base from '../layouts/Base.astro';
-
-// Section shells for M1. Real copy from docs/content.md lands in M2.
-const sections = [
-  { id: 'about', heading: 'About' },
-  { id: 'ventures', heading: 'Ventures' },
-  { id: 'projects', heading: 'Projects' },
-  { id: 'contact', heading: 'Contact' },
-];
+import Hero from '../components/Hero.astro';
+import About from '../components/About.astro';
+import Ventures from '../components/Ventures.astro';
+import Projects from '../components/Projects.astro';
+import Contact from '../components/Contact.astro';
 ---
 
-<Base title="Ashish Nag — Product leader and founder">
-  <section class="container hero" aria-labelledby="hero-heading">
-    <h1 id="hero-heading">Ashish Nag</h1>
-    <p class="lede">
-      Product leader who builds. I turn messy problems into shipped systems — at work, in my own
-      company, and in products I build end to end.
-    </p>
-  </section>
-
-  {
-    sections.map(({ id, heading }) => (
-      <section id={id} class="container section" aria-labelledby={`${id}-heading`}>
-        <h2 id={`${id}-heading`}>{heading}</h2>
-      </section>
-    ))
-  }
+<Base
+  title="Ashish Nag — Product leader and founder"
+  description="Product leader specializing in turning messy problems into scaled systems. Builder at heart."
+>
+  <Hero />
+  <About />
+  <Ventures />
+  <Projects />
+  <Contact />
 </Base>
-
-<style>
-  .hero {
-    padding-block: var(--space-6) var(--space-5);
-  }
-
-  .lede {
-    font-size: var(--step-1);
-    line-height: 1.45;
-    color: var(--muted);
-  }
-
-  .section {
-    padding-block: var(--space-5);
-    border-top: 1px solid var(--rule);
-  }
-</style>

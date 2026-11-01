@@ -1,0 +1,94 @@
+---
+import { getCollection } from 'astro:content';
+import Todo from './Todo.astro';
+
+const projects = (await getCollection('projects')).sort((a, b) => a.data.order - b.data.order);
+---
+
+<section id="projects" class="container section" aria-labelledby="projects-heading">
+  <h2 id="projects-heading">Projects</h2>
+  <p><Todo>2–3 screenshots per project, phone and desktop, same device frame</Todo></p>
+  <div class="list">
+    {
+      projects.map(({ data }) => (
+        <article class="project">
+          <h3>{data.title}</h3>
+          <p class="problem">{data.problem}</p>
+          <p>{data.summary}</p>
+          <ul class="tags" aria-label="Built with">
+            {data.tags.map((tag) => (
+              <li>{tag}</li>
+            ))}
+          </ul>
+          <ul class="links">
+            <li>
+              {data.liveStatus === 'live' ? (
+                <a href={data.live}>
+                  Live site<span class="visually-hidden"> for {data.title}</span>
+                </a>
+              ) : (
+                <span class="soon">Coming soon</span>
+              )}
+            </li>
+            {data.code && (
+              <li>
+                <a href={data.code}>
+                  Code on GitHub<span class="visually-hidden"> for {data.title}</span>
+                </a>
+              </li>
+            )}
+          </ul>
+        </article>
+      ))
+    }
+  </div>
+</section>
+
+<style>
+  .list {
+    display: grid;
+    gap: var(--space-5);
+    margin-top: var(--space-4);
+  }
+
+  .project {
+    padding-top: var(--space-3);
+    border-top: 2px solid var(--text);
+  }
+
+  .problem {
+    font-family: var(--font-serif);
+    font-size: var(--step-1);
+    font-style: italic;
+    line-height: 1.4;
+  }
+
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .tags {
+    gap: var(--space-1) var(--space-2);
+    margin-bottom: var(--space-2);
+    color: var(--muted);
+    font-size: var(--step--1);
+  }
+
+  .tags li:not(:last-child)::after {
+    content: '·';
+    margin-left: var(--space-2);
+  }
+
+  .links {
+    gap: var(--space-3);
+    font-weight: 500;
+  }
+
+  .soon {
+    color: var(--muted);
+  }
+</style>
