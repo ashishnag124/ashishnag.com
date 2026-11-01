@@ -1,5 +1,4 @@
 ---
-import Todo from './Todo.astro';
 import { EMAIL, LINKEDIN } from '../site';
 ---
 
@@ -14,17 +13,7 @@ import { EMAIL, LINKEDIN } from '../site';
   </p>
   <ul class="actions">
     <li><a class="button" href={LINKEDIN}>LinkedIn</a></li>
-    <li>
-      {
-        EMAIL ? (
-          <a class="button" href={`mailto:${EMAIL}`}>Email</a>
-        ) : (
-          <span class="button">
-            Email <Todo>public email address</Todo>
-          </span>
-        )
-      }
-    </li>
+    <li><a class="button" href={`mailto:${EMAIL}`}>Email</a></li>
   </ul>
 </section>
 

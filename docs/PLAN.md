@@ -19,10 +19,10 @@ Editorial, not techy — a well-set annual letter, with product screenshots as t
 | Body size / measure / leading | 18–19px · ~68ch · 1.6 |
 | Background (light) | #FAFAF7 |
 | Text (light) | #1A1A1A |
-| Accent | Deep oxblood (default) or ink blue — links and the timeline only |
+| Accent | Deep oxblood (default) or ink blue — links only |
 | Dark mode | Mirror the tokens under `prefers-color-scheme: dark`; keep AA contrast |
 
-Visuals that earn their place: project screenshots in a minimal device frame; an inline-SVG career timeline (horizontal on desktop, vertical on mobile); an optional portrait; the Selective Sips and Settld logos on the Ventures cards.
+Visuals that earn their place: project screenshots in a minimal device frame; an optional portrait; the Selective Sips and Settld logos on the Ventures cards.
 
 ## Milestones
 
@@ -43,7 +43,7 @@ Owner: **CC** = Claude Code in this repo, **AN** = Ashish (dashboards, assets, a
 
 ### M2 — Home page (CC)
 
-- [ ] Hero, About + SVG timeline, Ventures, Projects, Contact — copy from `docs/content.md` only
+- [ ] Hero, About, Ventures, Projects, Contact — copy from `docs/content.md` only
 - [ ] "Coming soon" state for projects whose live URL isn't up yet
 - [ ] Meta tags, favicon, 1200×630 social preview image
 - Done when: every section renders with real copy or a visible `[TODO]`; Lighthouse mobile 95+ (performance, accessibility)

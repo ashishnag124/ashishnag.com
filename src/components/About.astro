@@ -1,17 +1,3 @@
----
-import Timeline from './Timeline.astro';
-import Todo from './Todo.astro';
-
-// Placeholder steps are the example from docs/content.md; Ashish supplies the real steps and years.
-const milestones = [
-  { year: null, label: 'First product role' },
-  { year: null, label: 'Vida Health' },
-  { year: null, label: 'Founded Selective Sips' },
-  { year: null, label: 'Founded Settld' },
-  { year: null, label: 'Independent products' },
-];
----
-
 <section id="about" class="container section" aria-labelledby="about-heading">
   <h2 id="about-heading">About</h2>
   <p>
@@ -28,17 +14,4 @@ const milestones = [
     specs, acceptance criteria, staging, release — and ship them at near-zero running cost. The
     projects below are the result.
   </p>
-
-  <h3 class="timeline-heading">Career</h3>
-  <p>
-    <Todo>milestones with years — Ashish to supply the exact steps and years</Todo>
-  </p>
-  <Timeline milestones={milestones} />
 </section>
-
-<style>
-  .timeline-heading {
-    margin-top: var(--space-5);
-    font-size: var(--step-1);
-  }
-</style>

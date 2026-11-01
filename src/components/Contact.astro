@@ -7,12 +7,10 @@ import { EMAIL, LINKEDIN, RESUME } from '../site';
   <h2 id="contact-heading">Contact</h2>
   <p>
     I'm interested in <Todo>senior product / program roles in X</Todo>, and in talking with founders
-    building <Todo>Y</Todo>. The fastest way to reach me is {
-      EMAIL ? <a href={`mailto:${EMAIL}`}>{EMAIL}</a> : <Todo>email</Todo>
-    }.
+    building <Todo>Y</Todo>. The fastest way to reach me is <a href={`mailto:${EMAIL}`}>{EMAIL}</a>.
   </p>
   <ul class="links">
-    <li>{EMAIL ? <a href={`mailto:${EMAIL}`}>Email</a> : <>Email <Todo>public email address</Todo></>}</li>
+    <li><a href={`mailto:${EMAIL}`}>Email</a></li>
     <li><a href={LINKEDIN}>LinkedIn</a></li>
     <li>
       {RESUME ? <a href={RESUME}>Résumé (PDF)</a> : <>Résumé PDF <Todo>add file to public/resume.pdf</Todo></>}

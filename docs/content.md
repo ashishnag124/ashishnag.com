@@ -7,7 +7,7 @@ Source of truth for all text on the site. `[TODO: …]` marks a fact only Ashish
 - Name: Ashish Nag
 - Positioning: Product leader who builds. I turn messy problems into shipped systems — at work, in my own company, and in products I build end to end.
 - Currently: Director of Product Management at Vida Health · San Francisco
-- Buttons: LinkedIn (https://www.linkedin.com/in/ashish-nag/) · Email ([TODO: public email address])
+- Buttons: LinkedIn (https://www.linkedin.com/in/ashish-nag/) · Email (ashishnag94@gmail.com)
 
 ## About
 
@@ -18,10 +18,6 @@ Outside my day job I founded Selective Sips, a wine cellar consultancy for priva
 I also build software myself. Using modern AI tooling, I take ideas from brief to production — specs, acceptance criteria, staging, release — and ship them at near-zero running cost. The projects below are the result.
 
 > Note: consider "10 years in product management" in place of "10 years as a product manager" to match the Director title. Ashish to decide.
-
-### Career timeline (inline SVG, 4–5 milestones)
-
-[TODO: milestones with years — e.g. first product role → Vida Health → founded Selective Sips → founded Settld → independent products. Ashish to supply the exact steps and years.]
 
 ## Ventures
 
@@ -62,7 +58,7 @@ Privacy by design (no bot joins calls; content processed only when a user sends 
 
 ## Contact
 
-I'm interested in [TODO: senior product / program roles in X], and in talking with founders building [TODO: Y]. The fastest way to reach me is [TODO: email].
+I'm interested in [TODO: senior product / program roles in X], and in talking with founders building [TODO: Y]. The fastest way to reach me is ashishnag94@gmail.com.
 Links: email · LinkedIn · Résumé PDF [TODO: add file to `public/resume.pdf`]
 
 ## Meta
