@@ -39,7 +39,7 @@ Link: https://www.itssettld.com/ (no GitHub link — private repo)
 | 2 | Basketball Tracker | Following one college team means hopping between apps. | One page for any college basketball team: schedule, roster, stats, and live game view, with your team remembered on return visits. | Next.js · Live data · Railway | https://basketball.ashishnag.com (not live yet) | https://github.com/ashishnag124/basketballhome |
 | 3 | Flights Overhead | "What plane is that?" | A live map of every aircraft within 25 nautical miles, with flight details on tap. Built in a day as a data-visualization experiment. | Leaflet · ADS-B · Express | https://flights.ashishnag.com (not live yet) | https://github.com/ashishnag124/casablancaflights |
 
-Screenshots: [TODO: 2–3 per project, phone and desktop, same device frame]
+Screenshots: StoryStitch, Selective Sips and Settld captured from the live sites. [TODO: Basketball Tracker and Flights Overhead once they are live]
 
 ## Case study: StoryStitch (write first)
 

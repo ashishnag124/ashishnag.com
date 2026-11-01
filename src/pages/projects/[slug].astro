@@ -1,0 +1,137 @@
+---
+import { getCollection, render } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import Todo from '../../components/Todo.astro';
+import Screenshot from '../../components/Screenshot.astro';
+
+// Only projects with a written case study (a Markdown body) get a page.
+export async function getStaticPaths() {
+  const projects = await getCollection('projects', (p) => Boolean(p.body?.trim()));
+  return projects.map((project) => ({ params: { slug: project.id }, props: { project } }));
+}
+
+const { project } = Astro.props;
+const { data } = project;
+const { Content } = await render(project);
+---
+
+<Base title={`${data.title} — Ashish Nag`} description={data.problem}>
+  <article class="container case-study">
+    <p class="back"><a href="/#projects">← All projects</a></p>
+    <header>
+      <h1>{data.title}</h1>
+      <p class="problem">{data.problem}</p>
+      <ul class="tags" aria-label="Built with">
+        {data.tags.map((tag) => <li>{tag}</li>)}
+      </ul>
+      <ul class="links">
+        <li>
+          {data.liveStatus === 'live' ? <a href={data.live}>Live site</a> : <span class="soon">Coming soon</span>}
+        </li>
+        {data.code && <li><a href={data.code}>Code on GitHub</a></li>}
+      </ul>
+    </header>
+
+    {
+      data.screenshots ? (
+        <div class="screenshots">
+          {data.screenshots.map((shot) => (
+            <Screenshot
+              {...shot}
+              widths={shot.frame === 'phone' ? [280, 560, 840] : [720, 1080, 1440]}
+              sizes={shot.frame === 'phone' ? '(min-width: 48rem) 17rem, 45vw' : '(min-width: 48rem) 42rem, 100vw'}
+            />
+          ))}
+        </div>
+      ) : (
+        <p>
+          <Todo>2–3 screenshots, phone and desktop, same device frame</Todo>
+        </p>
+      )
+    }
+
+    <div class="body">
+      <Content />
+    </div>
+  </article>
+</Base>
+
+<style>
+  .case-study {
+    padding-block: var(--space-4) var(--space-6);
+  }
+
+  .back {
+    margin-bottom: var(--space-4);
+    font-size: var(--step--1);
+    font-weight: 500;
+  }
+
+  header {
+    margin-bottom: var(--space-4);
+    padding-bottom: var(--space-4);
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .problem {
+    font-family: var(--font-serif);
+    font-size: var(--step-1);
+    font-style: italic;
+    line-height: 1.4;
+  }
+
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .tags {
+    gap: var(--space-1) var(--space-2);
+    margin-bottom: var(--space-2);
+    color: var(--muted);
+    font-size: var(--step--1);
+  }
+
+  .tags li:not(:last-child)::after {
+    content: '·';
+    margin-left: var(--space-2);
+  }
+
+  .links {
+    gap: var(--space-3);
+    font-weight: 500;
+  }
+
+  .soon {
+    color: var(--muted);
+  }
+
+  /* Phones side by side; desktop shots span the full row. */
+  .screenshots {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 17rem));
+    gap: var(--space-3);
+    max-width: 42rem;
+  }
+
+  .screenshots > :global(.desktop) {
+    grid-column: 1 / -1;
+  }
+
+  .body :global(h2) {
+    margin-top: var(--space-5);
+    font-size: var(--step-2);
+  }
+
+  .body :global(ul) {
+    max-width: var(--measure);
+    padding-left: 1.2em;
+  }
+
+  .body :global(li) {
+    margin-bottom: var(--space-1);
+  }
+</style>

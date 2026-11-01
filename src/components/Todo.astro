@@ -1,18 +1,6 @@
 ---
 // Renders a docs/content.md placeholder visibly, so missing facts are obvious on the preview.
+// Markdown can use the same look with <span class="todo">[TODO: …]</span>; the style is in global.css.
 ---
 
 <span class="todo">[TODO: <slot />]</span>
-
-<style>
-  .todo {
-    padding: 0 0.3em;
-    outline: 1px dashed var(--muted);
-    outline-offset: -1px;
-    color: var(--muted);
-    font-family: var(--font-sans);
-    font-size: 0.85em;
-    font-style: normal;
-    font-weight: 400;
-  }
-</style>
