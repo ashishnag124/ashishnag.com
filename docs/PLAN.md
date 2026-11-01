@@ -58,6 +58,8 @@ Owner: **CC** = Claude Code in this repo, **AN** = Ashish (dashboards, assets, a
 
 Cloudflare Pages can only serve the apex domain if the zone is on Cloudflare ([docs](https://developers.cloudflare.com/pages/platform/custom-domains/)), so DNS moves off Squarespace first. Same pattern as selectivesips.com.
 
+Step-by-step checklist with today's records: [`docs/M4-dns-cutover.md`](M4-dns-cutover.md). DNSSEC is on at Squarespace and must be turned off before the nameserver switch.
+
 1. Add `ashishnag.com` as a free Cloudflare zone; let it import records.
 2. Compare against Squarespace line by line. Must carry over: `storystitch`, `staging.storystitch`, `api-staging.storystitch`, `_railway-verify` TXT records, Resend records if added, any MX/email records.
 3. Railway CNAMEs DNS-only (grey cloud) at first.
