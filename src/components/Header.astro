@@ -1,0 +1,68 @@
+---
+const links = [
+  { href: '/#about', label: 'About' },
+  { href: '/#ventures', label: 'Ventures' },
+  { href: '/#projects', label: 'Projects' },
+  { href: '/#contact', label: 'Contact' },
+];
+---
+
+<header class="site-header">
+  <div class="container inner">
+    <a class="name" href="/">Ashish Nag</a>
+    <nav aria-label="Primary">
+      <ul>
+        {links.map(({ href, label }) => <li><a href={href}>{label}</a></li>)}
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<style>
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: var(--bg);
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-1) var(--space-3);
+    min-height: var(--header-height);
+    padding-block: var(--space-1);
+  }
+
+  .name {
+    font-family: var(--font-serif);
+    font-size: var(--step-1);
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+  }
+
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-1) var(--space-3);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  nav a {
+    font-size: var(--step--1);
+    font-weight: 500;
+    color: var(--text);
+    text-decoration: none;
+  }
+
+  nav a:hover {
+    color: var(--accent);
+    text-decoration: underline;
+  }
+</style>
