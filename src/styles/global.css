@@ -132,6 +132,17 @@ img {
   border-top: 1px solid var(--rule);
 }
 
+.todo {
+  padding: 0 0.3em;
+  outline: 1px dashed var(--muted);
+  outline-offset: -1px;
+  color: var(--muted);
+  font-family: var(--font-sans);
+  font-size: 0.85em;
+  font-style: normal;
+  font-weight: 400;
+}
+
 .visually-hidden:not(:focus):not(:active) {
   position: absolute;
   width: 1px;

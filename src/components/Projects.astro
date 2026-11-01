@@ -10,7 +10,7 @@ const projects = (await getCollection('projects')).sort((a, b) => a.data.order -
   <p><Todo>2–3 screenshots per project, phone and desktop, same device frame</Todo></p>
   <div class="list">
     {
-      projects.map(({ data }) => (
+      projects.map(({ id, data, body }) => (
         <article class="project">
           <h3>{data.title}</h3>
           <p class="problem">{data.problem}</p>
@@ -21,6 +21,13 @@ const projects = (await getCollection('projects')).sort((a, b) => a.data.order -
             ))}
           </ul>
           <ul class="links">
+            {body?.trim() && (
+              <li>
+                <a href={`/projects/${id}`}>
+                  Case study<span class="visually-hidden">: {data.title}</span>
+                </a>
+              </li>
+            )}
             <li>
               {data.liveStatus === 'live' ? (
                 <a href={data.live}>
