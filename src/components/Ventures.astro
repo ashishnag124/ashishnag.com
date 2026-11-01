@@ -1,11 +1,21 @@
 ---
 import Todo from './Todo.astro';
+import Screenshot from './Screenshot.astro';
+import selectiveSips from '../assets/ventures/selective-sips.png';
+import settld from '../assets/ventures/settld.png';
+
+const thumb = { frame: 'desktop' as const, widths: [480, 720, 1040], sizes: '(min-width: 48rem) 34rem, 100vw' };
 ---
 
 <section id="ventures" class="container section" aria-labelledby="ventures-heading">
   <h2 id="ventures-heading">Ventures</h2>
   <div class="cards">
     <article class="card">
+      <Screenshot
+        src={selectiveSips}
+        alt="Selective Sips homepage: “A cellar built around your palate”, wine cellar consulting in California, with WSET Level 3, 30+ regions sourced and 3 expert consultants."
+        {...thumb}
+      />
       <p class="logo"><Todo>Selective Sips logo — add file</Todo></p>
       <h3>Selective Sips</h3>
       <p class="role">Founder & Lead Consultant</p>
@@ -17,6 +27,11 @@ import Todo from './Todo.astro';
     </article>
 
     <article class="card">
+      <Screenshot
+        src={settld}
+        alt="Settld homepage: “Your team’s decisions, kept straight by AI”, above a sample decision log entry flagged as a conflict with an earlier decision."
+        {...thumb}
+      />
       <h3>Settld</h3>
       <p class="role">Founder</p>
       <p>
@@ -42,6 +57,10 @@ import Todo from './Todo.astro';
     flex-direction: column;
     padding-top: var(--space-3);
     border-top: 2px solid var(--text);
+  }
+
+  .card > :global(.shot) {
+    margin-bottom: var(--space-3);
   }
 
   .card h3 {

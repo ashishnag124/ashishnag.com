@@ -7,6 +7,16 @@ tags: [React, On-device ML, Cloudflare, Railway]
 live: https://storystitch.ashishnag.com
 liveStatus: live
 code: https://github.com/ashishnag124/storystitch
+screenshots:
+  - src: ../../assets/projects/storystitch/editor-phone.png
+    alt: "StoryStitch editor on a phone: a photo of a dog and a portrait of a woman arranged as tilted prints, the note “Found 1 face and a dog”, and a strip of alternative layouts."
+    frame: phone
+  - src: ../../assets/projects/storystitch/home-phone.png
+    alt: "StoryStitch start screen on a phone: “Turn 1–8 photos into an Instagram Story collage”, Take photo and Choose photos buttons, and the note “Your photos stay on this device. Nothing is uploaded.”"
+    frame: phone
+  - src: ../../assets/projects/storystitch/editor-desktop.png
+    alt: "StoryStitch editor on desktop with the same collage, the layout strip, the Style panel and a Share button."
+    frame: desktop
 ---
 
 ## Problem

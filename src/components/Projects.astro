@@ -1,17 +1,23 @@
 ---
 import { getCollection } from 'astro:content';
 import Todo from './Todo.astro';
+import Screenshot from './Screenshot.astro';
 
 const projects = (await getCollection('projects')).sort((a, b) => a.data.order - b.data.order);
 ---
 
 <section id="projects" class="container section" aria-labelledby="projects-heading">
   <h2 id="projects-heading">Projects</h2>
-  <p><Todo>2–3 screenshots per project, phone and desktop, same device frame</Todo></p>
+  <p><Todo>screenshots for Basketball Tracker and Flights Overhead once they're live</Todo></p>
   <div class="list">
     {
       projects.map(({ id, data, body }) => (
-        <article class="project">
+        <article class:list={['project', { 'has-thumb': data.screenshots }]}>
+          {data.screenshots && (
+            <div class="thumb">
+              <Screenshot {...data.screenshots[0]} widths={[180, 360, 540]} sizes="180px" />
+            </div>
+          )}
           <h3>{data.title}</h3>
           <p class="problem">{data.problem}</p>
           <p>{data.summary}</p>
@@ -61,6 +67,35 @@ const projects = (await getCollection('projects')).sort((a, b) => a.data.order -
   .project {
     padding-top: var(--space-3);
     border-top: 2px solid var(--text);
+  }
+
+  /* Thumbnail sits beside the text on wide screens and above it on phones. */
+  .has-thumb {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .thumb {
+    width: 9rem;
+    margin-bottom: var(--space-3);
+  }
+
+  @media (min-width: 48rem) {
+    .has-thumb {
+      grid-template-columns: 1fr 180px;
+      column-gap: var(--space-5);
+    }
+
+    .has-thumb > :not(.thumb) {
+      grid-column: 1;
+    }
+
+    .thumb {
+      grid-column: 2;
+      grid-row: 1 / span 6;
+      width: 180px;
+      margin-bottom: 0;
+    }
   }
 
   .problem {

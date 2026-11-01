@@ -7,6 +7,7 @@
   --muted: #5c5a55; /* 6.6:1 */
   --accent: #7b1e2b; /* oxblood, 9.7:1. Links only. */
   --rule: #dddad2;
+  --frame: #1a1a1a; /* device frames around screenshots */
 
   --font-serif: 'Source Serif 4 Variable', Georgia, 'Times New Roman', serif;
   --font-sans: 'Inter Variable', system-ui, -apple-system, 'Segoe UI', sans-serif;
@@ -41,6 +42,7 @@
     --muted: #a5a19a; /* 7.2:1 */
     --accent: #e3959a; /* 7.9:1 */
     --rule: #34312d;
+    --frame: #3d3a36;
   }
 }
 

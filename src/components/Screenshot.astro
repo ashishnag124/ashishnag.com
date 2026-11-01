@@ -1,0 +1,47 @@
+---
+// A screenshot in a minimal device frame: a dark bezel for phones, a plain title bar for desktops.
+import { Image } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
+
+interface Props {
+  src: ImageMetadata;
+  alt: string;
+  frame: 'phone' | 'desktop';
+  widths: number[];
+  sizes: string;
+}
+
+const { src, alt, frame, widths, sizes } = Astro.props;
+---
+
+<div class:list={['shot', frame]}>
+  <Image src={src} alt={alt} widths={widths} sizes={sizes} format="webp" quality={80} />
+</div>
+
+<style>
+  .shot {
+    overflow: hidden;
+    background: var(--frame);
+  }
+
+  .shot :global(img) {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .phone {
+    padding: 5px;
+    border-radius: 22px;
+  }
+
+  .phone :global(img) {
+    border-radius: 17px;
+  }
+
+  .desktop {
+    padding-top: 12px;
+    border: 1px solid var(--frame);
+    border-radius: 6px;
+  }
+</style>

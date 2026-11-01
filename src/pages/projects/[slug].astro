@@ -2,6 +2,7 @@
 import { getCollection, render } from 'astro:content';
 import Base from '../../layouts/Base.astro';
 import Todo from '../../components/Todo.astro';
+import Screenshot from '../../components/Screenshot.astro';
 
 // Only projects with a written case study (a Markdown body) get a page.
 export async function getStaticPaths() {
@@ -31,7 +32,23 @@ const { Content } = await render(project);
       </ul>
     </header>
 
-    <p><Todo>2–3 screenshots, phone and desktop, same device frame</Todo></p>
+    {
+      data.screenshots ? (
+        <div class="screenshots">
+          {data.screenshots.map((shot) => (
+            <Screenshot
+              {...shot}
+              widths={shot.frame === 'phone' ? [280, 560, 840] : [720, 1080, 1440]}
+              sizes={shot.frame === 'phone' ? '(min-width: 48rem) 17rem, 45vw' : '(min-width: 48rem) 42rem, 100vw'}
+            />
+          ))}
+        </div>
+      ) : (
+        <p>
+          <Todo>2–3 screenshots, phone and desktop, same device frame</Todo>
+        </p>
+      )
+    }
 
     <div class="body">
       <Content />
@@ -90,6 +107,18 @@ const { Content } = await render(project);
 
   .soon {
     color: var(--muted);
+  }
+
+  /* Phones side by side; desktop shots span the full row. */
+  .screenshots {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 17rem));
+    gap: var(--space-3);
+    max-width: 42rem;
+  }
+
+  .screenshots > :global(.desktop) {
+    grid-column: 1 / -1;
   }
 
   .body :global(h2) {
