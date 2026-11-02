@@ -1,9 +1,22 @@
 ---
+import { Image } from 'astro:assets';
+import headshot from '../assets/headshot.jpg';
 import { EMAIL, LINKEDIN } from '../site';
 ---
 
 <section class="container hero" aria-labelledby="hero-heading">
-  <h1 id="hero-heading">Ashish Nag</h1>
+  <div class="intro">
+    <Image
+      class="headshot"
+      src={headshot}
+      alt="Photo of Ashish Nag"
+      width={200}
+      height={200}
+      format="webp"
+      loading="eager"
+    />
+    <h1 id="hero-heading">Ashish Nag</h1>
+  </div>
   <p class="lede">
     Product leader who builds. I turn messy problems into shipped systems — at work, in my own
     company, and in products I build end to end.
@@ -20,6 +33,24 @@ import { EMAIL, LINKEDIN } from '../site';
 <style>
   .hero {
     padding-block: var(--space-6) var(--space-5);
+  }
+
+  .intro {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    margin-bottom: var(--space-3);
+  }
+
+  .intro h1 {
+    margin: 0;
+  }
+
+  .headshot {
+    flex-shrink: 0;
+    width: clamp(5.5rem, 4.5rem + 4vw, 7rem);
+    height: auto;
+    border-radius: 50%;
   }
 
   .lede {
