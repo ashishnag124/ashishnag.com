@@ -58,8 +58,7 @@ Privacy by design (no bot joins calls; content processed only when a user sends 
 
 ## Contact
 
-I'm interested in [TODO: senior product / program roles in X], and in talking with founders building [TODO: Y]. The fastest way to reach me is ashishnag94@gmail.com.
-Links: email · LinkedIn
+I can be reached at ashishnag94@gmail.com.
 
 ## Meta
 
