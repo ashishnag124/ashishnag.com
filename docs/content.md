@@ -36,10 +36,10 @@ Link: https://www.itssettld.com/ (no GitHub link — private repo)
 | Order | Project | One-line problem | Card description | Tags | Live | Code |
 | --- | --- | --- | --- | --- | --- | --- |
 | 1 | StoryStitch | Story collages take too long to lay out by hand. | Pick up to 8 photos; StoryStitch proposes layouts, finds each photo's subject on the device, and crops so faces stay whole. Exports a post-ready 1080×1920 image. Your photos never leave your phone. | React · On-device ML · Cloudflare · Railway | https://storystitch.ashishnag.com | https://github.com/ashishnag124/storystitch |
-| 2 | Basketball Tracker | Following one college team means hopping between apps. | One page for any college basketball team: schedule, roster, stats, and live game view, with your team remembered on return visits. | Next.js · Live data · Railway | https://basketball.ashishnag.com (not live yet) | https://github.com/ashishnag124/basketballhome |
-| 3 | Flights Overhead | "What plane is that?" | A live map of every aircraft within 25 nautical miles, with flight details on tap. Built in a day as a data-visualization experiment. | Leaflet · ADS-B · Express | https://flights.ashishnag.com (not live yet) | https://github.com/ashishnag124/casablancaflights |
+| 2 | Basketball Tracker | Following one college team means hopping between apps. | One page for any college basketball team: schedule, roster, stats, and live game view, with your team remembered on return visits. | Next.js · Live data · Railway | https://basketballhome.ashishnag.com | https://github.com/ashishnag124/basketballhome |
+| 3 | Flights Overhead | "What plane is that?" | A live map of every aircraft within 25 nautical miles, with flight details on tap. Built in a day as a data-visualization experiment. | Leaflet · ADS-B · Express | https://casablancaflights.ashishnag.com | https://github.com/ashishnag124/casablancaflights |
 
-Screenshots: StoryStitch, Selective Sips and Settld captured from the live sites. [TODO: Basketball Tracker and Flights Overhead once they are live]
+Screenshots: StoryStitch, Selective Sips, Settld and Basketball Tracker captured from the live sites. [TODO: Flights Overhead, once its map loads without the Carto "API key required" watermark]
 
 ## Case study: StoryStitch (write first)
 

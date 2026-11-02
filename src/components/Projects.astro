@@ -1,6 +1,5 @@
 ---
 import { getCollection } from 'astro:content';
-import Todo from './Todo.astro';
 import Screenshot from './Screenshot.astro';
 
 const projects = (await getCollection('projects')).sort((a, b) => a.data.order - b.data.order);
@@ -8,7 +7,6 @@ const projects = (await getCollection('projects')).sort((a, b) => a.data.order -
 
 <section id="projects" class="container section" aria-labelledby="projects-heading">
   <h2 id="projects-heading">Projects</h2>
-  <p><Todo>screenshots for Basketball Tracker and Flights Overhead once they're live</Todo></p>
   <div class="list">
     {
       projects.map(({ id, data, body }) => (

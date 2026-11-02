@@ -66,7 +66,7 @@ Step-by-step checklist with today's records: [`docs/M4-dns-cutover.md`](M4-dns-c
 4. Create a Cloudflare redirect rule: root → https://www.linkedin.com/in/ashish-nag/ (Squarespace forwarding stops once nameservers move).
 5. Switch nameservers at Squarespace. Registration stays there.
 6. Confirm `storystitch.ashishnag.com` and the staging API still resolve with valid certificates.
-7. Deploy Basketball Tracker and Flights Overhead on Railway at `basketball.ashishnag.com` and `flights.ashishnag.com`; add their CNAMEs (DNS-only).
+7. Deploy Basketball Tracker and Flights Overhead on Railway at `basketballhome.ashishnag.com` and `casablancaflights.ashishnag.com`; add their CNAMEs (DNS-only).
 
 ### M5 — Launch (AN, CC verifies)
 
