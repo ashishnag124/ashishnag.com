@@ -28,8 +28,8 @@ Personal site for Ashish Nag: a writing-led portfolio that shows a product leade
 | Selective Sips | Ventures | https://selectivesips.com | none |
 | Settld | Ventures | https://www.itssettld.com/ | none — private repo, never link GitHub |
 | StoryStitch (flagship) | Projects, first | https://storystitch.ashishnag.com | https://github.com/ashishnag124/storystitch |
-| Basketball Tracker | Projects | https://basketball.ashishnag.com (not live yet) | https://github.com/ashishnag124/basketballhome |
-| Flights Overhead | Projects | https://flights.ashishnag.com (not live yet) | https://github.com/ashishnag124/casablancaflights |
+| Basketball Tracker | Projects | https://basketballhome.ashishnag.com | https://github.com/ashishnag124/basketballhome |
+| Flights Overhead | Projects | https://casablancaflights.ashishnag.com | https://github.com/ashishnag124/casablancaflights |
 
 - AudioBooth is a fork Ashish didn't write. Never list it.
 - A project whose live URL doesn't resolve yet shows a "Coming soon" state instead of a dead link. Don't remove the card.

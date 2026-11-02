@@ -17,11 +17,15 @@ Looked up on 2026-11-01 from public DNS and from the current authoritative names
 | `staging.storystitch` | CNAME | `storystitch-web-staging.pages.dev` | 14400 | Keep, **DNS only** |
 | `api-staging.storystitch` | CNAME | `y17fnxjl.up.railway.app` | 14400 | Keep, **DNS only** |
 | `_railway-verify.api-staging.storystitch` | TXT | `railway-verify=4d8d6b57…aa1da0e8d` | 14400 | Keep exactly |
+| `basketballhome` | CNAME | `jup7s452.up.railway.app` (Basketball Tracker) | — | Keep, **DNS only** |
+| `_railway-verify.basketballhome` | TXT | `railway-verify=60f4d8ad…6c769c655` | — | Keep exactly |
+| `casablancaflights` | CNAME | `zyadhlnb.up.railway.app` (Flights Overhead) | — | Keep, **DNS only** |
+| `_railway-verify.casablancaflights` | TXT | `railway-verify=fb4cacd0…e251fa723` | — | Keep exactly |
 | `resend._domainkey` | TXT | `p=MIGfMA0G…IDAQAB` (Resend DKIM key) | — | Keep exactly |
 | `send` | MX | `10 feedback-smtp.us-east-1.amazonses.com` | — | Keep (Resend bounce handling) |
 | `send` | TXT | `v=spf1 include:amazonses.com ~all` | — | Keep exactly |
 
-Not present today: `www`, an apex MX (no email is received at `@ashishnag.com`), `_dmarc`, `api.storystitch`, `basketball`, `flights`. CLAUDE.md mentions `_railway-verify` records for `storystitch` and `staging.storystitch`; none are visible publicly. Those two subdomains are on Cloudflare Pages, not Railway. If the Squarespace panel shows them anyway, carry them over.
+Not present today: `www`, an apex MX (no email is received at `@ashishnag.com`), `_dmarc`, `api.storystitch`. The first version of this list missed the `basketballhome` and `casablancaflights` records (they were looked up as `basketball` and `flights`), so they weren't copied at first; they were added to the table above on 2026-11-01. CLAUDE.md mentions `_railway-verify` records for `storystitch` and `staging.storystitch`; none are visible publicly. Those two subdomains are on Cloudflare Pages, not Railway. If the Squarespace panel shows them anyway, carry them over.
 
 Today the root redirect is Squarespace domain forwarding: `https://ashishnag.com` returns a **302** to `https://www.linkedin.com/in/ashish-nag/`.
 
@@ -115,11 +119,11 @@ The same `p=MIGfMA0G…` key.
 
 ### 8. Basketball Tracker and Flights Overhead on Railway (whenever they're ready)
 
-For each app (`basketball` and `flights`):
+Both apps are already on Railway as `basketballhome.ashishnag.com` and `casablancaflights.ashishnag.com`, with their records in the table above. For any new app:
 
-- [ ] Railway → the service → **Settings** → **Networking** → **Custom Domain** → `basketball.ashishnag.com` (or `flights.ashishnag.com`). Railway shows a CNAME target and a `_railway-verify…` TXT record.
+- [ ] Railway → the service → **Settings** → **Networking** → **Custom Domain** → `<name>.ashishnag.com`. Railway shows a CNAME target and a `_railway-verify…` TXT record.
 - [ ] Cloudflare → **DNS** → add both records exactly as Railway shows them. Set the CNAME to **DNS only**.
-- [ ] Wait for Railway to show the certificate as issued, then check `curl -sI https://basketball.ashishnag.com | head -1` returns `HTTP/2 200`.
+- [ ] Wait for Railway to show the certificate as issued, then check `curl -sI https://<name>.ashishnag.com | head -1` returns `HTTP/2 200`.
 - [ ] Tell Claude Code, which will switch that project's `liveStatus` to `live` and capture its screenshots.
 
 ## Done when
