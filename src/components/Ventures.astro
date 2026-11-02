@@ -3,6 +3,8 @@ import Todo from './Todo.astro';
 import Screenshot from './Screenshot.astro';
 import selectiveSips from '../assets/ventures/selective-sips.png';
 import settld from '../assets/ventures/settld.png';
+import ssLogo from '../assets/ventures/selectivesips-logo.svg';
+import ssLogoReversed from '../assets/ventures/selectivesips-logo-reversed.svg';
 
 const thumb = { frame: 'desktop' as const, widths: [480, 720, 1040], sizes: '(min-width: 48rem) 34rem, 100vw' };
 ---
@@ -16,8 +18,12 @@ const thumb = { frame: 'desktop' as const, widths: [480, 720, 1040], sizes: '(mi
         alt="Selective Sips homepage: “A cellar built around your palate”, wine cellar consulting in California, with WSET Level 3, 30+ regions sourced and 3 expert consultants."
         {...thumb}
       />
-      <p class="logo"><Todo>Selective Sips logo — add file</Todo></p>
-      <h3>Selective Sips</h3>
+      <h3>
+        <picture>
+          <source srcset={ssLogoReversed.src} media="(prefers-color-scheme: dark)" />
+          <img class="logo" src={ssLogo.src} alt="Selective Sips" width="210" height="32" />
+        </picture>
+      </h3>
       <p class="role">Founder & Lead Consultant</p>
       <p>
         Cellar strategy, sourcing, and collection management for private clients in California,
@@ -61,6 +67,12 @@ const thumb = { frame: 'desktop' as const, widths: [480, 720, 1040], sizes: '(mi
 
   .card > :global(.shot) {
     margin-bottom: var(--space-3);
+  }
+
+  .logo {
+    display: block;
+    width: auto;
+    height: 2rem;
   }
 
   .card h3 {

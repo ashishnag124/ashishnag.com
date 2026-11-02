@@ -24,7 +24,7 @@ I also build software myself. Using modern AI tooling, I take ideas from brief t
 ### Selective Sips
 
 Founder & Lead Consultant. Cellar strategy, sourcing, and collection management for private clients in California, delivered by a team of three WSET Level 3–certified consultants.
-Link: https://selectivesips.com · Asset: existing Selective Sips logo [TODO: add file]
+Link: https://selectivesips.com · Asset: Selective Sips logo, `src/assets/ventures/selectivesips-logo.svg` (reversed version for dark mode)
 
 ### Settld
 
@@ -59,7 +59,7 @@ Privacy by design (no bot joins calls; content processed only when a user sends 
 ## Contact
 
 I'm interested in [TODO: senior product / program roles in X], and in talking with founders building [TODO: Y]. The fastest way to reach me is ashishnag94@gmail.com.
-Links: email · LinkedIn · Résumé PDF [TODO: add file to `public/resume.pdf`]
+Links: email · LinkedIn
 
 ## Meta
 

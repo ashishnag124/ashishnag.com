@@ -1,6 +1,6 @@
 ---
 import Todo from './Todo.astro';
-import { EMAIL, LINKEDIN, RESUME } from '../site';
+import { EMAIL, LINKEDIN } from '../site';
 ---
 
 <section id="contact" class="container section" aria-labelledby="contact-heading">
@@ -12,9 +12,6 @@ import { EMAIL, LINKEDIN, RESUME } from '../site';
   <ul class="links">
     <li><a href={`mailto:${EMAIL}`}>Email</a></li>
     <li><a href={LINKEDIN}>LinkedIn</a></li>
-    <li>
-      {RESUME ? <a href={RESUME}>Résumé (PDF)</a> : <>Résumé PDF <Todo>add file to public/resume.pdf</Todo></>}
-    </li>
   </ul>
 </section>
 
