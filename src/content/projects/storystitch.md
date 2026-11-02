@@ -45,7 +45,7 @@ The process mattered as much as the app. I started from a written [product brief
 
 ## Results and status
 
-Live at [storystitch.ashishnag.com](https://storystitch.ashishnag.com). <span class="todo">[TODO: results/status line — Ashish to supply]</span>
+Live at [storystitch.ashishnag.com](https://storystitch.ashishnag.com).
 
 ## What's next
 

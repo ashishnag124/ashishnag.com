@@ -28,7 +28,7 @@ Link: https://selectivesips.com · Asset: Selective Sips logo, `src/assets/ventu
 
 ### Settld
 
-Founder. Settld turns decisions scattered across meetings, Slack, email, and Teams into one searchable record, with an owner and deadline for each, and flags when a new decision contradicts an old one. Live with free, Team, and Business plans. [TODO: traction line — teams, users, or a customer quote]
+Founder. Settld turns decisions scattered across meetings, Slack, email, and Teams into one searchable record, with an owner and deadline for each, and flags when a new decision contradicts an old one. Live with free, Team, and Business plans.
 Link: https://www.itssettld.com/ (no GitHub link — private repo)
 
 ## Projects
@@ -50,7 +50,7 @@ Angles to cover, using the template in `CLAUDE.md`. Source material: `docs/produ
 - Explainable ranking: layouts scored by an optimal assignment over a photo × cell cost matrix, with named weights.
 - Process maturity: written brief, acceptance criteria tied to tests, staging/production split, gated releases. Show the brief and criteria, not just the app.
 
-[TODO: Ashish to approve the draft; results/status line]
+[TODO: Ashish to approve the draft]
 
 ## Case study: Settld (second candidate)
 
@@ -58,8 +58,7 @@ Privacy by design (no bot joins calls; content processed only when a user sends 
 
 ## Contact
 
-I'm interested in [TODO: senior product / program roles in X], and in talking with founders building [TODO: Y]. The fastest way to reach me is ashishnag94@gmail.com.
-Links: email · LinkedIn
+I can be reached at ashishnag94@gmail.com.
 
 ## Meta
 

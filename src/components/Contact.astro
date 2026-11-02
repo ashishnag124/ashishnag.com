@@ -1,28 +1,8 @@
 ---
-import Todo from './Todo.astro';
-import { EMAIL, LINKEDIN } from '../site';
+import { EMAIL } from '../site';
 ---
 
 <section id="contact" class="container section" aria-labelledby="contact-heading">
   <h2 id="contact-heading">Contact</h2>
-  <p>
-    I'm interested in <Todo>senior product / program roles in X</Todo>, and in talking with founders
-    building <Todo>Y</Todo>. The fastest way to reach me is <a href={`mailto:${EMAIL}`}>{EMAIL}</a>.
-  </p>
-  <ul class="links">
-    <li><a href={`mailto:${EMAIL}`}>Email</a></li>
-    <li><a href={LINKEDIN}>LinkedIn</a></li>
-  </ul>
+  <p>I can be reached at <a href={`mailto:${EMAIL}`}>{EMAIL}</a>.</p>
 </section>
-
-<style>
-  .links {
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--space-1) var(--space-4);
-    margin: var(--space-3) 0 0;
-    padding: 0;
-    list-style: none;
-    font-weight: 500;
-  }
-</style>
