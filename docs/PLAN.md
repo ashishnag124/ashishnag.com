@@ -6,7 +6,7 @@ Working copy of the planning doc (https://claude.ai/artifact/8w33WdoxxFtDrXj5Uub
 
 In under ten seconds, a reader should get: a product leader who also founds and ships things. LinkedIn covers the résumé; this site covers judgment, range, and proof of building.
 
-Primary readers: hiring managers and recruiters for senior product roles, then prospective clients, collaborators and founders. Each should leave with a one-line identity, a sense of trajectory, live projects to click, and an easy next step (LinkedIn, email, résumé).
+Primary readers: hiring managers and recruiters for senior product roles, then prospective clients, collaborators and founders. Each should leave with a one-line identity, a sense of trajectory, live projects to click, and an easy next step (LinkedIn, email).
 
 ## Visual direction
 
@@ -31,7 +31,7 @@ Owner: **CC** = Claude Code in this repo, **AN** = Ashish (dashboards, assets, a
 ### M0 — Setup
 
 - [ ] (CC) Create the public repo `ashishnag124/ashishnag.com`, commit `CLAUDE.md`, `docs/PLAN.md`, `docs/content.md` and a short `README.md` to `main`, push
-- [ ] (AN, can trail) Add assets to `src/assets/`: screenshots, logos, portrait (optional), `public/resume.pdf`
+- [ ] (AN, can trail) Add assets to `src/assets/`: screenshots, logos, portrait (optional)
 - [ ] (AN, can trail) Fill `[TODO]`s in `docs/content.md`; needed before M2 ships, not before M1
 
 ### M1 — Scaffold and design system (CC)

@@ -53,7 +53,7 @@ You don't have, and shouldn't ask for, access to these. When a step needs one, s
 - Cloudflare dashboard: creating the Pages project, adding the `ashishnag.com` zone, redirect rules, custom domains.
 - Squarespace: switching nameservers (the domain registration stays there).
 - Railway: deploying Basketball Tracker and Flights Overhead with their custom domains.
-- Supplying screenshots, portrait and résumé PDF (drop them in `src/assets/` or `public/`).
+- Supplying screenshots and portrait (drop them in `src/assets/`).
 
 **DNS warning:** `storystitch.ashishnag.com`, `staging.storystitch`, `api-staging.storystitch` and their `_railway-verify` TXT records already exist at Squarespace. Any DNS checklist you write must carry them over to Cloudflare unchanged.
 
