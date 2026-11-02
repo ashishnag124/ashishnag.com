@@ -23,7 +23,7 @@ I also build software myself. Using modern AI tooling, I take ideas from brief t
 
 ### Selective Sips
 
-Founder & Lead Consultant. Cellar strategy, sourcing, and collection management for private clients in California, delivered by a team of three WSET Level 3–certified consultants.
+Founder & Advisor. Wine cellar consulting in California. I help private collectors build a cellar they love without overpaying: one WSET Level 3–certified advisor, value-first picks from the Old World and New, and no upsell. (Updated 2026-11-01 to match the redesigned selectivesips.com, which presents a single advisor rather than a team of three.)
 Link: https://selectivesips.com · Asset: Selective Sips logo, `src/assets/ventures/selectivesips-logo.svg` (reversed version for dark mode)
 
 ### Settld
